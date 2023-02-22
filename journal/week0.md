@@ -15,6 +15,9 @@ Another requirement for week 0 was to use Cloud shell which i did. I was happy t
 
 I then watched Andrew Brown's architectural diagram guide on Youtube and created the required conceptual and logical architectural diagram for cruddur and the logical CI/CD pipeline architecture for it. The link to the diagrams is : https://lucid.app/lucidchart/7943683c-15e8-407d-a28d-23fb727d1d17/edit?invitationId=inv_737d9524-e316-4572-9a71-28403d758e49
 
+<img width="1232" alt="image" src="https://user-images.githubusercontent.com/112012120/220642838-d61bd066-8d1b-4be7-a65e-e6993ebf48eb.png">
+
+
 Finally, i genrated AWS access keys for the IAM user i created and created a named profile to use the access keys i generated to enable me make API calls programmatically from the CLI. I am interested in the fefatures that AWS CLI v2 have to offer interms of authenticating without directly storing access keys on your machine.
 
 I look forward to week 1 of the bootcamp

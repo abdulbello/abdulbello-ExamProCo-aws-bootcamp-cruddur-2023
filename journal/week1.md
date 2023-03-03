@@ -8,3 +8,13 @@ I followed the recording of Week1 - App containerization live class, and was abl
 
 
 It was interesting to learn from James Spurin and Edith Puclla, the guest instructors about docker containers and how every command run in your docker file, essentially creates an image, and that the "CMD" instruction in your docker file is your container entry point. The entry point is run when the container actually starts up. 
+
+
+
+
+
+
+
+As for the additional homework challenges, I was able to achieve the following:
+
+Run the CMD command in docker file as an external script. This took a while to achieve as I had to go read docker documentation to understand the various methods of running the CMD command (shell and executable mode). I also needed to do some research on shell scripting.

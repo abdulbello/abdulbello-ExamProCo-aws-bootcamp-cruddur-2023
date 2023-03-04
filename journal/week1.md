@@ -18,4 +18,6 @@ As for the additional homework challenges, I was able to achieve the following:
 Run the CMD command in docker file as an external script. This took a while to achieve as I had to go read docker documentation to understand the various methods of running the CMD command (shell and executable mode). I also needed to do some research on shell scripting. My CMD command: CMD /bin/bash ./cmd_script.sh
 
 
-I also created a docker hub account (free tier) and created 2 repositories for the backend and frontend application images. 
+I created a docker hub account (free tier) and created 2 repositories for the backend and frontend application images. Afterwards, I was able to push both frontend and backend images to my docker hub repo. Repo: https://hub.docker.com/repositories/onivehu
+
+As part of the homework challenges suggested by Andrew, i was able to learn about multi-stage builds which i think can be really useful to eliminate the need of maintaining multiple Dockerfiles and reducing complexity with using docker.

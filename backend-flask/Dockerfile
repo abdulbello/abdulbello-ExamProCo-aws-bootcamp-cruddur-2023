@@ -2,12 +2,16 @@ FROM python:3.10-slim-buster
 
 WORKDIR /backend-flask
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+#COPY requirements.txt requirements.txt
+#RUN pip3 install -r requirements.txt
+ENV PIPENV_VENV_IN_PROJECT=1
+RUN pip3 install pipenv
 
 RUN /bin/bash
 
 COPY . .
+
+#RUN pipenv sync
 
 RUN chmod +x cmd_script.sh
 

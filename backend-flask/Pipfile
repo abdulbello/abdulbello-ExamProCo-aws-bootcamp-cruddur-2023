@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+flask-cors = "*"
+opentelemetry-api = "*"
+opentelemetry-sdk = "*"
+opentelemetry-exporter-otlp-proto-http = "*"
+opentelemetry-instrumentation-flask = "*"
+opentelemetry-instrumentation-requests = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

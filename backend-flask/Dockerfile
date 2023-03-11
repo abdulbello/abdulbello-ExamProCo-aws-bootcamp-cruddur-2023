@@ -5,8 +5,6 @@ WORKDIR /backend-flask
 #COPY requirements.txt requirements.txt
 #RUN pip3 install -r requirements.txt
 #ENV PIPENV_VENV_IN_PROJECT=1
-ENV GITPOD_WORKSPACE_ID=$GITPOD_WORKSPACE_ID
-ENV GITPOD_WORKSPACE_CLUSTER_HOST=${GITPOD_WORKSPACE_CLUSTER_HOST}
 
 #RUN /bin/bash
 

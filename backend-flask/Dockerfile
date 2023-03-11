@@ -5,7 +5,8 @@ WORKDIR /backend-flask
 #COPY requirements.txt requirements.txt
 #RUN pip3 install -r requirements.txt
 #ENV PIPENV_VENV_IN_PROJECT=1
-
+ENV GITPOD_WORKSPACE_ID=$GITPOD_WORKSPACE_ID
+ENV GITPOD_WORKSPACE_CLUSTER_HOST=${GITPOD_WORKSPACE_CLUSTER_HOST}
 
 #RUN /bin/bash
 
@@ -23,7 +24,7 @@ ENV FLASK_ENV=development
 
 EXPOSE ${PORT}
 
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f http://localhost/api/activities/notifications || exit 1
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f "https://4567-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST" || exit 1
 
 #CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 

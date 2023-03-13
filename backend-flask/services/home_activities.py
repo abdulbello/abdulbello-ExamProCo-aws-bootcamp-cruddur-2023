@@ -50,5 +50,18 @@ class HomeActivities:
         'replies': []
       }
       ]
+
+      #xray --
+      
       span.set_attribute("app.result_length",len(results))
+      span.set_attribute("app.handle", HomeActivities().get_handles(results))
+        
     return results
+
+
+  def get_handles(self,results_:list()):
+    handles_ = []
+    for dict_ in results_:
+      handle = dict_["handle"]
+      handles_.append(handle)
+      return handles_

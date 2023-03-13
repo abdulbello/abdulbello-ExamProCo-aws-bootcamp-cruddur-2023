@@ -24,4 +24,9 @@ I was able to instrument the Cruddur app with open telemetry, Honeycomb and AWS 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/112012120/224734276-b1b75a69-312c-4901-8ce3-1e228dba466b.png">
 
 
-I'm currently trying to add custom attributes to my span for the Honeycomb intrumentation. I have add
+As part of the homework STRETCH assignements, I have just added a custom attribute to my span for the Honeycomb instrumentation. I was able to add a custome attribute (app.handle) which shows the handle for the user in that span.
+
+See below image as proof.
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/112012120/224765050-5dd8794d-dfdc-4383-a859-efbe74cbc5fc.png">
+

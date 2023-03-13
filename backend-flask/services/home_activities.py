@@ -6,6 +6,7 @@ tracer = trace.get_tracer("home.activities")
 
 class HomeActivities:
   def run():
+    #Honeycomb
     with tracer.start_as_current_span("home-activities-mock-data"):
       span = trace.get_current_span()
       
@@ -52,7 +53,7 @@ class HomeActivities:
       ]
 
       #xray --
-      
+      #logger.info("home activities")
       span.set_attribute("app.result_length",len(results))
       span.set_attribute("app.handle", HomeActivities().get_handles(results))
         

@@ -30,3 +30,9 @@ See below image as proof.
 
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/112012120/224765050-5dd8794d-dfdc-4383-a859-efbe74cbc5fc.png">
 
+
+I was also able to implement observability with rollbar:
+
+![image](https://user-images.githubusercontent.com/112012120/225931010-22f19d67-d678-4bfe-9fa9-3b75f25d4d16.png)
+
+

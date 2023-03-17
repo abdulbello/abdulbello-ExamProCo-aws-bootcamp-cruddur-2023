@@ -52,8 +52,10 @@ class HomeActivities:
       }
       ]
 
-      #xray --
+      #xray/Cloudwatch --
       #logger.info("home activities")
+
+      #Honeycomb
       span.set_attribute("app.result_length",len(results))
       span.set_attribute("app.handle", HomeActivities().get_handles(results))
         

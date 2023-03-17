@@ -44,8 +44,8 @@ provider.add_span_processor(processor)
 
 
 #AWS X-RAY
-#xray_url = os.getenv("AWS_XRAY_URL")
-#xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+xray_url = os.getenv("AWS_XRAY_URL")
+xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 
 #show trace in STDOUT for debugging
@@ -80,7 +80,7 @@ def init_rollbar():
     got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
 # AWS XRAY
-#XRayMiddleware(app, xray_recorder)
+XRayMiddleware(app, xray_recorder)
 
 #Honeycomb
 # Initialize automatic instrumentation with Flask

@@ -31,8 +31,13 @@ See below image as proof.
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/112012120/224765050-5dd8794d-dfdc-4383-a859-efbe74cbc5fc.png">
 
 
-I was also able to implement observability with rollbar:
+I was also able to implement observability with rollbar as well as subsegments on xray as seen below. It is interestiing implementing observability as this is my first time really. We only use Azure app insights and i've always wondered how they get such depth of information from an execuing application. :
 
 ![image](https://user-images.githubusercontent.com/112012120/225931010-22f19d67-d678-4bfe-9fa9-3b75f25d4d16.png)
+
+
+
+![image](https://user-images.githubusercontent.com/112012120/225933048-20a2224a-2019-43dc-914f-b96e4fff46cd.png)
+
 
 

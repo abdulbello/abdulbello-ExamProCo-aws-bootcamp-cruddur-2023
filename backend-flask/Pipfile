@@ -16,6 +16,7 @@ watchtower = "*"
 rollbar = "*"
 blinker = "*"
 flask-awscognito = "*"
+importlib-metadata = "*"
 
 [dev-packages]
 

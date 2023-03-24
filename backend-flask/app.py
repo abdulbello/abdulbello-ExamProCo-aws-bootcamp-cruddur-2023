@@ -32,7 +32,7 @@ import rollbar.contrib.flask
 from flask import got_request_exception
 
 
-from lib.cognito_jwt_token import *
+from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
 
 
 #AWS CloudWatch Logs
@@ -70,7 +70,7 @@ cognito_jwt_token = CognitoJwtToken(
   region=os.getenv("AWS_DEFAULT_REGION")
 )
 
-from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
+
 
 #Rollbar
 rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')

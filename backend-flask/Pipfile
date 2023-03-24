@@ -15,6 +15,7 @@ aws-xray-sdk = "*"
 watchtower = "*"
 rollbar = "*"
 blinker = "*"
+flask-awscognito = "*"
 
 [dev-packages]
 

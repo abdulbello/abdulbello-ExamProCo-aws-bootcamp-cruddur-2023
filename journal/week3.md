@@ -22,6 +22,7 @@ I'm currently watching the video for the cognito jwt server side verifier and it
 
 Watching the jwt video helped me get a better idea of how cors work, pre-processing a request, and structuring your application to separate libraries from services.
 
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/112012120/227585457-1e3ac01e-34f6-474e-b1c3-33fbd6ef1d3c.png">
 
 
 

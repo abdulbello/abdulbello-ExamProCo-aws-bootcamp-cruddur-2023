@@ -25,4 +25,11 @@ Watching the jwt video helped me get a better idea of how cors work, pre-process
 <img width="1440" alt="image" src="https://user-images.githubusercontent.com/112012120/227585457-1e3ac01e-34f6-474e-b1c3-33fbd6ef1d3c.png">
 
 
+It was inspiring watching Andrew's recording on other JWT implementation considerations. He inspired me when he spoke about reading the entire rfc documentation proposing JWTs. I've taken some time to read parts of it as well and it has helped me understand how they work as well. I said i'm inspired because i typically do not like to read long stuff, but now i am more open to it for the benefits.
+
+I am about two weeks behind schedule for the bootcamps and have not done any homework challenges for this week. I've read through them and they seem time consuming. I'm wondering if i can just submit my assignment but come back later in the bootcamp to try out some of the homework challenges.
+
+
+
+
 

@@ -2,5 +2,5 @@
 
 echo "db-create"
 
-psql $NO_DB_CONNECTION_URL -c "create database cruddur"
+psql $NO_DB_CONNECTION_URL -c "create database cruddur;"
 

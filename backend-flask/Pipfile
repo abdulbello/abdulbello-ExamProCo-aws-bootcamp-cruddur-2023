@@ -17,6 +17,7 @@ rollbar = "*"
 blinker = "*"
 flask-awscognito = "*"
 importlib-metadata = "*"
+psycopg = {extras = ["pool"], version = "*"}
 
 [dev-packages]
 

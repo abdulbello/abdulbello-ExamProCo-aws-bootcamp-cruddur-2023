@@ -47,9 +47,9 @@ class HomeActivities:
     return results
 
 
-  def get_handles(self,results_:list()):
-    handles_ = []
-    for dict_ in results_:
-      handle = dict_["handle"]
-      handles_.append(handle)
-      return handles_
+  #def get_handles(self,results_:list()):
+    #handles_ = []
+    #for dict_ in results_:
+      #handle = dict_["handle"]
+      #handles_.append(handle)
+      #return handles_

@@ -2,19 +2,17 @@ FROM python:3.11-slim-buster
 
 WORKDIR /backend-flask
 
-#COPY requirements.txt requirements.txt
-#RUN pip3 install -r requirements.txt
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 #ENV PIPENV_VENV_IN_PROJECT=1
 
 #RUN /bin/bash
 
 COPY . .
 
-RUN pip3 install pipenv
+#RUN pip3 install pipenv
 
-RUN pipenv install --system --ignore-pipfile
-
-#RUN pipenv install --sequential
+#RUN pipenv install --system --deploy --ignore-pipfile
 
 #RUN pipenv sync
 

@@ -200,7 +200,8 @@ def data_search():
 @app.route("/api/activities", methods=['POST','OPTIONS'])
 @cross_origin()
 def data_activities():
-  user_handle  = 'andrewbrown'
+
+  user_handle  = request.json['user_handle']
   message = request.json['message']
   ttl = request.json['ttl']
   model = CreateActivity.run(message, user_handle, ttl)
@@ -209,6 +210,30 @@ def data_activities():
   else:
     return model['data'], 200
   return
+  #access_token = extract_access_token(request.headers)
+  
+  #try:
+    #claims = cognito_jwt_token.verify(access_token)
+    # authenicatied request
+    #app.logger.debug("authenicated")
+    #app.logger.debug(claims)
+    #app.logger.debug(claims['username'])
+    #user_handle  = request.json['user_handle']
+    #message = request.json['message']
+    #print(f'message submitted is {message}')
+  
+    #ttl = request.json['ttl']
+    #model = CreateActivity.run(message, user_handle, ttl)
+    #if model['errors'] is not None:
+      #return model['errors'], 422
+    #else:
+      #return model['data'], 200
+  #except TokenVerifyError as e:
+    # unauthenicatied request
+    #app.logger.debug(e)
+    #app.logger.debug("unauthenicated!!")
+  #print (f'model is {model}')
+  #return model ['data'], 200
 
 @app.route("/api/activities/<string:activity_uuid>", methods=['GET'])
 @xray_recorder.capture('activities_show')

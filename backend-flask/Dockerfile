@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM python:3.11-slim-buster
 
 WORKDIR /backend-flask
 
@@ -12,7 +12,9 @@ COPY . .
 
 RUN pip3 install pipenv
 
-RUN pipenv install --system --deploy --ignore-pipfile
+RUN pipenv install --system --ignore-pipfile
+
+#RUN pipenv install --sequential
 
 #RUN pipenv sync
 

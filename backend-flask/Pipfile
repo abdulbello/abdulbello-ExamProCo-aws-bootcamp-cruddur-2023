@@ -18,6 +18,7 @@ blinker = "*"
 flask-awscognito = "*"
 importlib-metadata = "*"
 psycopg = {extras = ["pool"], version = "*"}
+psycopg-c = "*"
 
 [dev-packages]
 

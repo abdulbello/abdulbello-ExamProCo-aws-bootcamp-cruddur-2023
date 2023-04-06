@@ -20,7 +20,10 @@ tasks:
     command: |
       cd frontend-react-js
       npm i
-      
+  - name: install_python_libraries
+    command: |
+      cd backend-flask
+      pip install -r requirements.txt    
 vscode:
   extensions:
     - 42Crunch.vscode-openapi

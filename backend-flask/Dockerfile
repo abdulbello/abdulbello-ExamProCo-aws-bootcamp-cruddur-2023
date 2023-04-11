@@ -1,4 +1,4 @@
-FROM python:3.11-slim-buster
+FROM 611672787239.dkr.ecr.us-east-1.amazonaws.com/cruddur-python:3.10-slim-buster
 
 WORKDIR /backend-flask
 
@@ -18,7 +18,7 @@ COPY . .
 
 RUN chmod +x cmd_script.sh
 
-ENV FLASK_ENV=development
+ENV FLASK_DEBUG=1
 
 EXPOSE ${PORT}
 

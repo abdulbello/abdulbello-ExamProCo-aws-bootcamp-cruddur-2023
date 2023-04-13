@@ -3,12 +3,15 @@
     "executionRoleArn": "arn:aws:iam::611672787239:role/CruddurServiceExecutionRole",
     "taskRoleArn": "arn:aws:iam::611672787239:role/CruddurTaskRole",
     "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "requiresCompatibilities": [ 
+    "FARGATE" 
+    ],
     "containerDefinitions": [
       {
         "name": "backend-flask",
         "image": "611672787239.dkr.ecr.us-east-1.amazonaws.com/backend-flask",
-        "cpu": 256,
-        "memory": 512,
         "essential": true,
         "healthCheck": {
         "command": [

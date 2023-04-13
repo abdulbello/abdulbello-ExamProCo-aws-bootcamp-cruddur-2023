@@ -1,12 +1,12 @@
 {
     "family": "backend-flask",
-    "executionRoleArn": "arn:aws:iam::AWS_ACCOUNT_ID:role/CruddurServiceExecutionRole",
-    "taskRoleArn": "arn:aws:iam::AWS_ACCOUNT_ID:role/CruddurTaskRole",
+    "executionRoleArn": "arn:aws:iam::611672787239:role/CruddurServiceExecutionRole",
+    "taskRoleArn": "arn:aws:iam::611672787239:role/CruddurTaskRole",
     "networkMode": "awsvpc",
     "containerDefinitions": [
       {
         "name": "backend-flask",
-        "image": "BACKEND_FLASK_IMAGE_URL",
+        "image": "611672787239.dkr.ecr.us-east-1.amazonaws.com/backend-flask",
         "cpu": 256,
         "memory": 512,
         "essential": true,
@@ -22,18 +22,18 @@
           "logDriver": "awslogs",
           "options": {
               "awslogs-group": "cruddur",
-              "awslogs-region": "ca-central-1",
+              "awslogs-region": "us-east-1",
               "awslogs-stream-prefix": "backend-flask"
           }
         },
         "environment": [
           {"name": "OTEL_SERVICE_NAME", "value": "backend-flask"},
           {"name": "OTEL_EXPORTER_OTLP_ENDPOINT", "value": "https://api.honeycomb.io"},
-          {"name": "AWS_COGNITO_USER_POOL_ID", "value": ""},
-          {"name": "AWS_COGNITO_USER_POOL_CLIENT_ID", "value": ""},
-          {"name": "FRONTEND_URL", "value": ""},
-          {"name": "BACKEND_URL", "value": ""},
-          {"name": "AWS_DEFAULT_REGION", "value": ""}
+          {"name": "AWS_COGNITO_USER_POOL_ID", "value": "us-east-1_jnh52akZC"},
+          {"name": "AWS_COGNITO_USER_POOL_CLIENT_ID", "value": "21u2se87bt3g7fcqqebufvqqb"},
+          {"name": "FRONTEND_URL", "value": "*"},
+          {"name": "BACKEND_URL", "value": "*"},
+          {"name": "AWS_DEFAULT_REGION", "value": "us-east-1"}
         ],
         "secrets": [
           {"name": "AWS_ACCESS_KEY_ID"    , "valueFrom": "arn:aws:ssm:AWS_REGION:AWS_ACCOUNT_ID:parameter/cruddur/backend-flask/AWS_ACCESS_KEY_ID"},

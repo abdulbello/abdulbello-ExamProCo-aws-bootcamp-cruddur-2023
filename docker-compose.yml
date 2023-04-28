@@ -27,6 +27,8 @@ services:
     build: ./backend-flask
     ports:
       - "4567:4567"
+    networks: 
+      cruddur-net:
     volumes:
       - ./backend-flask:/backend-flask
   frontend-react-js:
@@ -41,12 +43,16 @@ services:
       #REACT_APP_CLIENT_ID: "21u2se87bt3g7fcqqebufvqqb"
       #LOCAL_CONNECTION_URL}
     build: ./frontend-react-js
+    networks: 
+      cruddur-net:
     ports:
       - "3000:3000"
     volumes:
       - ./frontend-react-js:/frontend-react-js
   xray-daemon:
     image: "amazon/aws-xray-daemon"
+    networks: 
+      cruddur-net:
     environment:
       AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}"
       AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"
@@ -62,6 +68,8 @@ services:
     command: "-jar DynamoDBLocal.jar -sharedDb -dbPath ./data"
     image: "amazon/dynamodb-local:latest"
     container_name: dynamodb-local
+    networks: 
+      cruddur-net:
     ports:
       - "8000:8000"
     volumes:
@@ -73,6 +81,8 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
+    networks: 
+      cruddur-net:
     ports:
       - '5432:5432'
     volumes: 
@@ -81,9 +91,9 @@ services:
 # the name flag is a hack to change the default prepend folder
 # name when outputting the image names
 networks: 
-  internal-network:
+  cruddur-net:
     driver: bridge
-    name: cruddur
+    name: cruddur-net
 volumes:
   db:
     driver: local

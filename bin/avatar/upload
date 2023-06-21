@@ -10,4 +10,4 @@ echo $DATA_FILE_PATH
 
 
 
-aws s3 cp "$DATA_FILE_PATH" "s3://assets.$DOMAIN_NAME/avatars/original/"
+aws s3 cp "$DATA_FILE_PATH" "s3://cruddur-original-uploaded-avatars/data.jpg"

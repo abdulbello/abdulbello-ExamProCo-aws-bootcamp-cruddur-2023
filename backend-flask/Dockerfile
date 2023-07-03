@@ -22,6 +22,6 @@ EXPOSE ${PORT}
 
 #HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD curl -f "https://4567-$GITPOD_WORKSPACE_ID.$GITPOD_WORKSPACE_CLUSTER_HOST" || exit 1
 
-CMD [ "python3", "-m" ,"-u", "flask", "run", "--host=0.0.0.0", "--port=4567", "--debug"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567", "--debug"]
 
 #CMD /bin/bash ./cmd_script.sh
